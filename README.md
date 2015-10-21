@@ -1,7 +1,5 @@
 # blocks
-
-variables:
-
+## variables:
 $block-padding-y:       2rem !default;
 $block-padding-x:       0 !default;
 
@@ -25,6 +23,7 @@ $opacity-lg:            0.6 !default;
 $opacity-sm:            0.4 !default;
 $opacity-xs:            0.2 !default;
 
+##classes
 
 classes global:
 .block
