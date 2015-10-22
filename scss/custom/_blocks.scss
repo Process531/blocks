@@ -16,8 +16,9 @@ $block-description-size:2rem !default;
 
 $block-image-size:      cover !default;
 $block-image-position:  50% 50% !default;
-$opacity-md:            0.8 !default;
+
 $opacity-lg:            0.6 !default;
+$opacity-md:            0.8 !default;
 $opacity-sm:            0.4 !default;
 $opacity-xs:            0.2 !default;
 
@@ -61,17 +62,17 @@ $opacity-xs:            0.2 !default;
 			opacity: $opacity-md;
 		}
 		&-opacity-lg {
-			&:before {
+			&:after {
 				opacity: $opacity-lg;
 			}
 		}
 		&-opacity-sm {
-			&:before {
+			&:after {
 				opacity: $opacity-sm;
 			}
 		}
 		&-opacity-xs {
-			&:before {
+			&:after {
 				opacity: $opacity-xs;
 			}
 		}
