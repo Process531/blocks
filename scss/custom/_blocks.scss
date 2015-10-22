@@ -22,6 +22,17 @@ $opacity-md:            0.8 !default;
 $opacity-sm:            0.4 !default;
 $opacity-xs:            0.2 !default;
 
+%block-absolute {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	> .block-inner {
+		display: block;
+	}
+}
+
+
 .block {
 	padding: $block-padding-y $block-padding-x;
 	display: table;
@@ -45,6 +56,14 @@ $opacity-xs:            0.2 !default;
 		.h1,.h2,.h3,.h4,.h5,.h6 {
 			color: inherit;
 		}
+	}
+	&-absolute-top {
+		@extend %block-absolute;
+		top: 0;
+	}
+	&-absolute-bottom {
+		@extend %block-absolute;
+		bottom: 0;
 	}
 	&-overlay {
 		position: relative;
@@ -85,7 +104,10 @@ $opacity-xs:            0.2 !default;
 	// childs
 	&-header {
 		display: table-header-group;
-		height: 1px;
+		// height: 1px;
+		.block-inner {
+			vertical-align: top;
+		}
 	}
 	&-content {
 		display: table-row;
@@ -95,7 +117,10 @@ $opacity-xs:            0.2 !default;
 	}
 	&-footer {
 		display: table-footer-group;
-		height: 1px;
+		// height: 1px;
+		.block-inner {
+			vertical-align: bottom;
+		}
 	}
 	&-inner {
 		display: table-cell;
